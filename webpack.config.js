@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const PUBLIC_PATH_PREFIX = 'https://fat0wl.github.io/audio-vibrator/'
+const PUBLIC_PATH_PREFIX = './'
 
 module.exports = {
   entry: {
