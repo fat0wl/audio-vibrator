@@ -4,6 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const PUBLIC_PATH_PREFIX = 'https://fat0wl.github.io/audio-vibrator/'
+
 module.exports = {
   entry: {
     app: './src/index.js'
@@ -17,11 +19,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: 'src/index.html',
+      pathPrefix: PUBLIC_PATH_PREFIX
     })
   ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'docs'),
-    publicPath: 'https://fat0wl.github.io/audio-vibrator/'
+    publicPath: PUBLIC_PATH_PREFIX
   }
 }
